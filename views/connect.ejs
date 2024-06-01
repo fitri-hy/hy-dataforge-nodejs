@@ -11,29 +11,60 @@
 
 <body class="bg-gray-100 flex justify-center items-center h-screen">
   <div class="bg-white shadow-md rounded py-9 px-12 pt-6 pb-8 mb-4">
-    <img src="/images/logo.png" class="h-20 w-20 m-auto mb-2">
-	<h1 class="text-2xl mb-4 font-bold text-center">Connect Database</h1>
-    <form action="/connect" method="post">
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="host">Host:</label>
-        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="host" name="host" type="text" value="localhost" required>
-      </div>
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="user">Username:</label>
-        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="user" name="user" type="text" value="root" required>
-      </div>
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password:</label>
-        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" name="password" type="password" value="root" required>
-      </div>
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="database">Database:</label>
-        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="database" name="database" type="text" value="demo" required>
-      </div>
-      <div class="flex items-center justify-between pt-4">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Connect</button>
-      </div>
-    </form>
+	<img src="/images/logo.png" class="h-20 w-20 m-auto mb-2">
+	<h1 class="text-3xl mb-9 font-bold text-center">Connect Database</h1>
+	  <div class="grid lg:grid-cols-2 grid-cols-1 gap-9 max-w-4xl">
+		<div>
+			<form action="/connect" method="post">
+			  <div class="mb-4">
+				<label class="block text-gray-700 text-sm font-bold mb-2" for="host">Host:</label>
+				<input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="host" name="host" type="text" placeholder="localhost or domain" required>
+			  </div>
+			  <div class="mb-4">
+				<label class="block text-gray-700 text-sm font-bold mb-2" for="user">Username:</label>
+				<input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="user" name="user" type="text" placeholder="username database or cpanel" required>
+			  </div>
+			  <div class="mb-4">
+				<label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password:</label>
+				<input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" name="password" type="password" placeholder="password database or cpanel" required>
+			  </div>
+			  <div class="mb-4">
+				<label class="block text-gray-700 text-sm font-bold mb-2" for="database">Database:</label>
+				<input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="database" name="database" type="placeholder" placeholder="name database" required>
+			  </div>
+			  <div class="flex items-center justify-between pt-4">
+				<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Connect</button>
+			  </div>
+			</form>
+		</div>
+		<div class="lg:border-l lg:pl-6">
+			<h2 class="text-2xl font-semibold text-gray-700 text-center">Remote MySQL®</h2>
+			<p class="mt-2 text-gray-700 text-center">Follow these steps to use Remote MySQL® on your hosting service</p>
+			<div class="mt-6 text-gray-700">
+				<ul class="list-decimal px-4">
+					<li>
+						Go to Cpanel -> <span class="font-bold">Remote MySQL®</span>
+					</li>
+					<li class="mt-2">
+						In the Add Access Host section, fill in the <span class="font-bold">public IP</span> of your device.
+						<br>
+						<a href="/images/remote.png" target="_blank">
+							<img src="/images/remote.png" class="wfull h-auto">
+						</a>
+					</li>
+					<li class="mt-2">
+						Connect by filling in the form on the left with the following remote data:<br>
+						<ul class="list-disc mt-2">
+						  <li>Host: <span class="font-bold">domain</span></li>
+						  <li>Username: <span class="font-bold">username_cpanel</span></li>
+						  <li>Password: <span class="font-bold">password_cpanel</span></li>
+						  <li>Database: <span class="font-bold">name_database</span></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
   </div>
 </body>
 
