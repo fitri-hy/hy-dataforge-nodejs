@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<%- include('head') %>
+	<title>Login | Hy-DataForge</title>
+	<meta name="description" content="Efficient Data Management Center">
+	<meta name="keywords" content="DataForge, hy gorup, data management, database">
+	<meta name="robots" content="index, follow">
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+  <div class="bg-white shadow-md rounded py-9 px-12 pt-6 pb-8 mb-4">
+    <img src="/images/logo.png" class="h-20 w-20 m-auto mb-2">
+	<h1 class="text-2xl mb-4 font-bold text-center">Connect Database</h1>
+    <form action="/connect" method="post">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="host">Host:</label>
+        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="host" name="host" type="text" value="localhost" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="user">Username:</label>
+        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="user" name="user" type="text" value="root" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password:</label>
+        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" name="password" type="password" value="root" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="database">Database:</label>
+        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="database" name="database" type="text" value="demo" required>
+      </div>
+      <div class="flex items-center justify-between pt-4">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Connect</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>

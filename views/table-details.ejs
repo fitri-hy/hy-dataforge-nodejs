@@ -130,6 +130,18 @@
 				</tbody>
 			</table>
 		</div>
+		<h2 class="text-xl font-bold mb-4 mt-9 text-gray-700">LOG</h2>
+		<div class="logs bg-black py-2 px-4 mt-2 h-[200px] overflow-y-auto">
+			<ul class="font-mono">
+				<% logs.forEach(log => { %>
+					<% let logClass = 'text-green-400'; %>
+					<% if (log.toLowerCase().includes('error') || log.toLowerCase().includes('fail')) { %>
+						<% logClass = 'text-red-400'; %>
+					<% } %>
+					<li class="<%= logClass %> text-sm"><%= log %></li>
+				<% }) %>
+			</ul>
+		</div>
 	</main>
 </body>
 </html>
